@@ -35,11 +35,11 @@
               {% if not request.user.is_authenticated %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'login' %}">Acceder</a>
-              </li>
+              </li>              
+              {% else %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'profile' %}">Perfil</a>
               </li>
-              {% else %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'logout' %}">Salir</a>
               </li>
