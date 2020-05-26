@@ -43,3 +43,9 @@ class EmailUpdate(UpdateView):
     def get_object(self):
         # recuperar el objeto que se va a editar        
         return self.request.user
+
+    def get_form(self, form_class = None):
+        form = super(EmailUpdate, self).get_form()
+        # Modificar en tiempo real
+        form.fields['email'].widget = forms.EmailInput(attrs = {'class':'form-control mb-2', 'placeholder':'Email'})
+        return form

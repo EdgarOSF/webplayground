@@ -30,8 +30,8 @@ class EmailForm(forms.ModelForm):
     email = forms.EmailField(required = True, help_text = "Rquerido, 254 caracteres como maximo y debe ser valido")
 
     class Meta:
-        model : User
-        fields : ['email']
+        model = User
+        fields = ['email']
     
     def clean_email(self):
         email = self.cleaned_data.get("email")
