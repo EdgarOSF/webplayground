@@ -8,7 +8,7 @@ from django import forms
 from .models import Profile
 
 class SingUpView(CreateView):
-    form_class = UserCreationFormWithEmail   
+    form_class = UserCreationFormWithEmail
     template_name = 'registration/signup.html'
 
     def get_success_url(self):
